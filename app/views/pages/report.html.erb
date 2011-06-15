@@ -1,0 +1,11 @@
+  <div id="flood_content" class="content">
+  </div>
+  
+ 
+<%= raw(@content.map { |x| x.render }.join("\n")) if @content %>
+
+  <div id="quake_content" class="content">
+  </div>
+
+    <div id="infoboxes" class="infoboxes span-24 full"></div>
+

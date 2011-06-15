@@ -1,0 +1,7 @@
+    <p class="replace">There are _num_ nuclear powerplants within _radius_.</p>
+    <table style="width: 90%">
+      <tr><td>Powerplant Name</td><td>Latitude</td><td>Longitude</td></tr>
+    </table>
+    <p>
+Though Nuclear Reactors have many safeguards, it is still very important to protect yourself against a potential emergency.  An emergency at a nuclear facility may include an explosion or leak Radioactive material can contaminate the air, water and ground surfaces for miles around. During a nuclear incident, it is important to avoid radioactive material, if possible.  As with any radiation, you want to try to limit exposure. It is important to avoid breathing radiological dust that may be released in the air.  For more information on how to prepare for an incident, visit the <a href="http://oem.readyphiladelphia.org/RelId/607367/ISvars/default/Radiation_Exposure.htm">radiation page at ReadyPhiladelphia.org</a>.
+    </p>

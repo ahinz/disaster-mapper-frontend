@@ -1,0 +1,52 @@
+class PagesController < ApplicationController
+  def home
+  end
+
+  def scripts
+    @scripts ||= ["torn","flood","hurricane","nuke","epa"]
+  end
+
+  def datasets
+    @datasets ||= DataSet.all
+  end
+
+  def report
+    @extra_scripts = '<script src="/pages/script" type="text/javascript"></script>'
+
+    @content = datasets
+  end
+
+  def script
+    script_name = params[:script]
+    data = datasets
+    render :text =>
+      render_js(data.inject(create_js_context(data)) { |ctxt, dataset| append_js(ctxt,dataset.js) })
+  end
+
+
+  # Need to move this to a helper
+  def create_js_context(datasets)
+    create_body = datasets.map do |dataset|
+      "build_content_div(\"#{dataset.name}_content\", \"#{dataset.header}\", \"#{dataset.name}_map\");"
+    end.join("\n")
+      
+    "function create_content() {\n#{create_body}\n}\n\n$(function() {\n"
+  end
+
+  def append_js(jscontext, page)
+    if (page.match /^file\:/)
+      append_js_file(jscontext, page.split(":")[1])
+    else
+      jscontext += "\n" + page
+    end
+  end
+
+  def append_js_file(jscontext, page)                
+      jscontext += "\n" + File.open("app/views/pages/#{page}.js").read
+  end
+
+  def render_js(jscontext)
+    jscontext + "\n});"
+  end
+
+end

@@ -1,0 +1,51 @@
+<% @datasets.each do |dataset| %>
+<div class="container">
+  <div class="dataset infobox">
+    <div style="text-align: center; float:left">
+      <%= dataset.name %>
+    </div>
+    <div style="float:right;"><a href="edit?id=<%= dataset.id %>">Edit</a></div>
+    <div style="clear:both;"></div>
+    <div>
+      <span style="padding:20px">Javascript: <%= dataset.js %></span>
+      <span style="padding:20px">Content: <%= dataset.content %></span>
+      <span style="padding:20px">URL: <%= dataset.url %></Span>
+      <span style="padding:20px">Created on: <%= dataset.created_at %></span>
+    </div>
+    <table>
+      <% if (dataset.countries.size > 0) %>
+      <tr>
+	<td>Countries</td>
+	<% dataset.countries.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end
+       if (dataset.states.size > 0) %>
+      <tr>
+	<td>States</td>
+	<% dataset.states.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end
+        if (dataset.counties.size > 0) %>
+      <tr>
+	<td>Counties</td>
+	<% dataset.counties.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end
+       if (dataset.cities.size > 0) %>
+      <tr>
+	<td>Cities</td>
+	<% dataset.cities.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<% end %>

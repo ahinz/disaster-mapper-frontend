@@ -1,0 +1,63 @@
+{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1011",
+               "short_name" : "1011",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Chestnut St",
+               "short_name" : "Chestnut St",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Philadelphia",
+               "short_name" : "Philadelphia",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Philadelphia",
+               "short_name" : "Philadelphia",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "Pennsylvania",
+               "short_name" : "PA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "19107",
+               "short_name" : "19107",
+               "types" : [ "postal_code" ]
+            }
+         ],
+         "formatted_address" : "1011 Chestnut St, Philadelphia, PA 19107, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 39.950050,
+               "lng" : -75.15729399999999
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 39.95319762068016,
+                  "lng" : -75.15414637931983
+               },
+               "southwest" : {
+                  "lat" : 39.94690237931982,
+                  "lng" : -75.16044162068016
+               }
+            }
+         },
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}

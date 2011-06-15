@@ -1,0 +1,8 @@
+    <p class="replace">_num_ EPA tracked facilities were found within _radius_</p>
+    <table>
+      <tr><td>Name</td><td>Code</td><td>Latitude</td><td>Longitude</td></tr>
+    </table>
+    <a href="javascript:$.publish('/show/epa');" id="show_epa"></a>
+    <p>
+      There are many facilities ranging from chemical plants to local auto repair shops that handle hazardous materials on a daily basis.  Some of these facilities may also be authorized to release products into the air or water.  In addition to the potential for a hazardous material accident causing a release into the environment, an explosion or fire may also be present.  It is important to know the materials that may be stored or transported around your location.  For more information on how to prepare for an incident, visit the hazardous materials page at ReadyPhiladelphia.org.
+    </p>

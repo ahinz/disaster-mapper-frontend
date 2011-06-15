@@ -1,0 +1,7 @@
+    <p class="replace">_num_ tornados touched down within _radius_ in the last year.</p>
+    <table style="width: 90%">
+      <tr><td>Date</td><td>F-Scale</td><td>Est. Loss</td><td>Latitude</td><td>Longitude</td></tr>
+    </table>    <p>Tornadoes are nature's most violent storms. They can appear suddenly without warning and can be invisible until dust and debris are picked up or a funnel cloud appears. Planning and practicing 
+specifically how and where you take shelter is a matter of survival. Be prepared to act quickly.  For more information on how to prepare for them, visit the <a href="http://oem.readyphiladelphi
+a.org/RelId/607373/articlepage/6/isvars/default/severe_weather.htm">tornado page at ReadyPhiladelphia.org</a>.
+    </p>

@@ -1,0 +1,14 @@
+class DataSet < ActiveRecord::Base
+  def render
+    "<div id=\"#{self.name}_content\" class=\"content\">\n#{self.content_rendered}\n</div>"
+  end
+
+  def content_rendered
+    match = self.content.match /^file:(.*)/
+    if (match)
+      "\n" + File.open("app/views/pages/#{match[1]}.content").read
+    else
+      self.content
+    end
+  end
+end
