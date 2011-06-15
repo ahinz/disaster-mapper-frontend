@@ -11,7 +11,8 @@ class PagesController < ApplicationController
 
   def report
     # Grab and geocode address
-    @extra_scripts = '<script src="/pages/script" type="text/javascript"></script>'
+    @extra_scripts = '<script src="/pages/script" type="text/javascript"></script>' +
+      ' <script type="text/javascript" src="/javascripts/main.js"></script>'
 
     coded = geocode(params[:address])
     @content = DataSet.find_by_address(*create_address_array(coded["results"].first()["address_components"])[2..-1])
@@ -47,7 +48,7 @@ class PagesController < ApplicationController
 
   def create_js_context(datasets, lat, lon)
     create_body = datasets.map do |dataset|
-      "build_content_div(\"#{dataset.name}_content\", \"#{dataset.header}\", \"#{dataset.name}_map\");"
+      "build_content_div(\"#{dataset.name}_content\", \"#{dataset.header}\", \"#{dataset.name}_map\",\"#{dataset.url}\");"
     end.join("\n")
 
     "function create_latlng() {\n return new google.maps.LatLng(#{lat},#{lon});\n}\n" +

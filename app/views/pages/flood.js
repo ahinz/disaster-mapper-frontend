@@ -1,4 +1,6 @@
     $.subscribe("/update/flood_content", function( content ) {
+	var json = content;
+	return;
 	$.map(json.geo, function( polygon ) {
 	    var gmap = $.map(polygon, function( ar ) {
 		var pts = ar.split(" ")

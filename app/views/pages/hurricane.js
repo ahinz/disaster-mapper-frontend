@@ -1,10 +1,10 @@
-$.subscribe("/update/hur_content", function( json ) {
+$.subscribe("/update/hur_content", function( json, hur_map ) {
     $.map(json, function( hurricane ) {
 	var path = $.map(hurricane.path, function( ll ) {
 	    var lls = ll.split(",");
 	    return new google.maps.LatLng(lls[0],lls[1]);
 	});
-	
+
 	new google.maps.Polyline({
 	    strokeColor: '#00ff00',
 	    strokeOpacity: 1.0,
