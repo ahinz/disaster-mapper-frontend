@@ -1,1 +1,33 @@
-    <p>Based on USGS Gov't data you have a 0.9% change of a being in a significant earthquake in the next 50 years</p>
+Ground Motion data:
+<table>
+	<tr><td>Data Type</td><td>Spectral Acceleration</td><td>Probability of Exceedance</td><td>Ground Acceleration (g)</td></tr>
+	<tr><td>Hazard Map</td><td>10 Hz (0.1 Second)</td><td>10% in 50 Years</td><td>__US_10hz_10pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>10 Hz (0.1 Second)</td><td>2% in 50 Years</td><td>__US_10hz_2pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>10 Hz (0.1 Second)</td><td>5% in 50 Years</td><td>__US_10hz_5pc50_</td></tr>
+
+	<tr><td>Hazard Map</td><td>1 Hz (1 Second)</td><td>10% in 50 Years</td><td>__US_1hz_10pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>1 Hz (1 Second)</td><td>2% in 50 Years</td><td>__US_1hz_2pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>1 Hz (1 Second)</td><td>5% in 50 Years</td><td>__US_1hz_5pc50_</td></tr>
+
+	<tr><td>Hazard Map</td><td>2 Hz (0.5 Second)</td><td>10% in 50 Years</td><td>__US_2hz_10pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>2 Hz (0.5 Second)</td><td>2% in 50 Years</td><td>__US_2hz_2pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>2 Hz (0.5 Second)</td><td>5% in 50 Years</td><td>__US_2hz_5pc50_</td></tr>
+
+	<tr><td>Hazard Map</td><td>0.5 Hz (2 Second)</td><td>10% in 50 Years</td><td>__US_2sc_10pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>0.5 Hz (2 Second)</td><td>2% in 50 Years</td><td>__US_2sc_2pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>0.5 Hz (2 Second)</td><td>5% in 50 Years</td><td>__US_2sc_5pc50_</td></tr>
+
+	<tr><td>Hazard Map</td><td>3.33 Hz (0.3 Second)</td><td>10% in 50 Years</td><td>__US_3hz_10pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>3.33 Hz (0.3 Second)</td><td>2% in 50 Years</td><td>__US_3hz_2pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>3.33 Hz (0.3 Second)</td><td>5% in 50 Years</td><td>__US_3hz_5pc50_</td></tr>
+
+	<tr><td>Hazard Map</td><td>5 Hz (0.2 Second)</td><td>10% in 50 Years</td><td>__US_5hz_10pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>5 Hz (0.2 Second)</td><td>2% in 50 Years</td><td>__US_5hz_2pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>5 Hz (0.2 Second)</td><td>5% in 50 Years</td><td>__US_5hz_5pc50_</td></tr>
+
+	<tr><td>Hazard Map</td><td>Peak Ground Acceleration</td><td>10% in 50 Years</td><td>__US_pga_10pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>Peak Ground Acceleration</td><td>2% in 50 Years</td><td>__US_pga_2pc50_</td></tr>
+	<tr><td>Hazard Map</td><td>Peak Ground Acceleration</td><td>5% in 50 Years</td><td>__US_pga_5pc50_</td></tr>
+</table>
+
+Figures corresponding to the <a href="http://earthquake.usgs.gov/hazards/products/conterminous/2008/maps/"> 2008 U.S. Geological Survey National Seismic Hazard Maps</a>. These figures are probabilistic ground motion maps for Peak Ground Acceleration (PGA), 1Hz (1.0 second SA), and 5Hz (0.2 second SA). Some additional spectral accelerations (SA) are also included for central and southern California. Most figures correspond to the 2% in 50 year probability of exceedance, but there are a few figures for the 10% in 50 year and the 5% in 50 year probability of exceedance as well. All ground motion probabilities are computed for the B/C Boundary (Vs30 = 760 m/s).
