@@ -76,7 +76,8 @@ function build_content_div(contentp,header,map_id,url) {
     bind_ajax(create_latlng(), "/update/" + contentp, url, content, map_id);
 }
   //URL = "http://api.adamhinz.com/"
-URL = "http://localhost:4567/"
+  //URL = "http://localhost:4567/"
+URL = "http://api.disastermapper.com/"
 
 $(function() {
     center = create_latlng();
