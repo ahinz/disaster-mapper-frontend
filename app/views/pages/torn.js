@@ -6,7 +6,11 @@ function decode_loss(loss) {
     }
 }
 
-$.subscribe("/update/torn_content", function( content ) {
+$.subscribe("/update/torn_content", function( content, map_div ) {
+
+    var center = create_latlng();
+    var torn_map = spawn_map(map_div, center, 7);
+
     var json = content;
     var jq = $("#torn_content .replace");
     jq.html(jq.html().replace("_num_", content.length).replace("_radius_","50 miles"));

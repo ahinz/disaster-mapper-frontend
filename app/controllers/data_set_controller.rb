@@ -3,6 +3,10 @@ class DataSetController < ApplicationController
     @datasets = DataSet.all
   end
 
+  def api
+    @datasets = DataSet.all
+  end
+
   def edit
   end
 

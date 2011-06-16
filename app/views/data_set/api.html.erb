@@ -1,0 +1,64 @@
+<% @datasets.each do |dataset| %>
+<div class="container">
+  <div class="dataset infobox">
+    <div style="text-align: center">
+      <h3><%= dataset.header %></h3>
+    </div>
+    <table>
+      <tr>
+	<td>
+	  URL: 
+	</td>
+	<td>
+	  http://api.disastermapper.com/<%= dataset.url %>
+	</td>
+      </tr>
+      <tr>
+	<td>Method:</td>
+	<td>GET</td>
+      </tr>
+      <tr>
+	<td rowspan="2">Parameters</td>
+	<td>Address - String</td>
+      </tr>
+      <tr>
+	<td><p>Lat - Real</p><p>Lon - Real</p></td>
+      </tr>
+    </table>
+    <table>
+      <% if (dataset.countries.size > 0) %>
+      <tr>
+	<td>Countries</td>
+	<% dataset.countries.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end
+       if (dataset.states.size > 0) %>
+      <tr>
+	<td>States</td>
+	<% dataset.states.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end
+        if (dataset.counties.size > 0) %>
+      <tr>
+	<td>Counties</td>
+	<% dataset.counties.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end
+       if (dataset.cities.size > 0) %>
+      <tr>
+	<td>Cities</td>
+	<% dataset.cities.each do |c| %>
+	<td><%= c.tag_value %></td>
+	<% end %>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<% end %>

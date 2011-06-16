@@ -71,9 +71,9 @@ function build_content_div(contentp,header,map_id,url) {
     content.remove();
     $("#infoboxes").append(infobox_tmpl);
 
-    var map = spawn_map(map_id,center,10);
+//    var map = spawn_map(map_id,center,10);
 
-    bind_ajax(create_latlng(), "/update/" + contentp, url, content, map);
+    bind_ajax(create_latlng(), "/update/" + contentp, url, content, map_id);
 }
   //URL = "http://api.adamhinz.com/"
 URL = "http://localhost:4567/"

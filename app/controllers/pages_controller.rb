@@ -1,4 +1,7 @@
 require 'json'
+require 'uri'
+
+$geocode_cache ||= Hash.new
 
 class PagesController < ApplicationController
   def home
@@ -11,7 +14,7 @@ class PagesController < ApplicationController
 
   def report
     # Grab and geocode address
-    @extra_scripts = '<script src="/pages/script" type="text/javascript"></script>' +
+    @extra_scripts = '<script src="/pages/script?address=' + params[:address] + '" type="text/javascript"></script>' +
       ' <script type="text/javascript" src="/javascripts/main.js"></script>'
 
     coded = geocode(params[:address])
@@ -20,7 +23,16 @@ class PagesController < ApplicationController
   end
 
   def geocode(addr)
-    JSON.parse(File.open("app/views/pages/geo.json").read)
+    addr = URI.escape(addr)
+    if ($geocode_cache[addr] == nil)
+      puts "-- Address Cache Miss --"
+      rslt = JSON.parse(Net::HTTP.get(URI.parse("http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=#{addr}")))
+      $geocode_cache[addr] = rslt
+    else
+      puts "-- Cache Hit! --"
+    end
+
+    $geocode_cache[addr]
   end
 
   def script

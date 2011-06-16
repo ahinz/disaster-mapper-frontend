@@ -3,6 +3,8 @@ Rhok3Rails::Application.routes.draw do
 
   get "data_set/edit"
 
+  get "data_set/api"
+
   get "pages/home"
 
   get "pages/report"

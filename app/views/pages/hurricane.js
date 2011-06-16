@@ -1,4 +1,8 @@
-$.subscribe("/update/hur_content", function( json, hur_map ) {
+$.subscribe("/update/hur_content", function( json, hur_map_div ) {
+
+    var center = create_latlng();
+    var hur_map = spawn_map(hur_map_div, center, 2);
+
     $.map(json, function( hurricane ) {
 	var path = $.map(hurricane.path, function( ll ) {
 	    var lls = ll.split(",");

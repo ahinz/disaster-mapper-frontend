@@ -1,12 +1,14 @@
-    $.subscribe("/update/flood_content", function( content ) {
+$.subscribe("/update/flood_content", function( content, map_div ) {
+    var center = create_latlng();
+    var flood_map = spawn_map(map_div, center, 11);
+
 	var json = content;
-	return;
+
 	$.map(json.geo, function( polygon ) {
 	    var gmap = $.map(polygon, function( ar ) {
-		var pts = ar.split(" ")
-		return new google.maps.LatLng(pts[1],pts[0]);
+		return new google.maps.LatLng(ar[1],ar[0]);
 	    });
-	    
+
 	    new google.maps.Polygon({
 		paths: gmap, 
 		strokeColor: "#FF0000",
@@ -18,7 +20,6 @@
 	    });
 	});
 
-	
 	var jq = $("#flood_content .replace");
 	jq.html(jq.html().replace("_zone_", content.attr.FLD_ZONE));
     });

@@ -1,6 +1,10 @@
 
-    $.subscribe("/update/epa_content", function( content ) {
-	//HACKALERT
+$.subscribe("/update/epa_content", function( content, map_div ) {
+    //HACKALERT
+    var center = create_latlng();
+    var epa_map = spawn_map(map_div, center, 13);
+
+
 	var json = content;
 	$.map(json, function( epa ) {
 	    var myLatLng = new google.maps.LatLng(epa.lat,epa.lon);
