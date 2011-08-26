@@ -11,7 +11,7 @@ $.subscribe("/update/epa_content", function( content, map_div ) {
 	    var marker = new google.maps.Marker({
 		position: myLatLng, 
 		map: epa_map, 
-		title: "Nuclear Power Plant: " + json.title + "(" + json.type + ")",
+		title: "EPA Site",
 		icon: "http://www.google.com/intl/en_us/mapfiles/ms/micons/green-dot.png"
 	    });  
 	    //

@@ -30,7 +30,7 @@ $.subscribe("/update/torn_content", function( content, map_div ) {
 	    position: myLatLng, 
 	    map: torn_map, 
 	    icon: "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png",
-		title: "Nuclear Power Plant: " + json.title + "(" + json.type + ")"
+		title: ll.date
 	});  
     });
 });
